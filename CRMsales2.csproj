@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9822DAA7-1C17-4E5E-8D81-A7FCB83ED615}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRMsales2</RootNamespace>
+    <AssemblyName>CRMsales2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aga.Controls, Version=1.7.0.0, Culture=neutral, PublicKeyToken=fcc90fbf924463a3, processorArchitecture=MSIL">
+      <HintPath>packages\TreeViewAdv.1.7.0.0\lib\net\Aga.Controls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CommonTools">
+      <HintPath>.\CommonTools.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.ConnectorNET.Data.6.8.3.2\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.ConnectorNET.Entity.6.8.3.2\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddNewWorkerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewWorkerForm.Designer.cs">
+      <DependentUpon>AddNewWorkerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\Calculation\Calculation.cs" />
+    <Compile Include="BLL\Calculation\ParametersForCalculation.cs" />
+    <Compile Include="BLL\CommercialOffer.cs" />
+    <Compile Include="BLL\ContactPerson.cs" />
+    <Compile Include="BLL\CounterpartyCompanies.cs" />
+    <Compile Include="BLL\CountrapartyType.cs" />
+    <Compile Include="BLL\CurrentLeadStatus.cs" />
+    <Compile Include="BLL\ImportClient.cs" />
+    <Compile Include="BLL\ImportGoods.cs" />
+    <Compile Include="BLL\ImportUnits.cs" />
+    <Compile Include="BLL\Messenger_SkypeOrOther.cs" />
+    <Compile Include="BLL\PaymentType.cs" />
+    <Compile Include="BLL\Product.cs" />
+    <Compile Include="BLL\SocialNetworkLinks.cs" />
+    <Compile Include="BLL\ValueCalculation.cs" />
+    <Compile Include="BLL\ContactMobilePhone.cs" />
+    <Compile Include="CounterpartyAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CounterpartyAddForm.Designer.cs">
+      <DependentUpon>CounterpartyAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CounterpartyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CounterpartyForm.Designer.cs">
+      <DependentUpon>CounterpartyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CounterpartyTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CounterpartyTypeForm.Designer.cs">
+      <DependentUpon>CounterpartyTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateCalculationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateCalculationForm.Designer.cs">
+      <DependentUpon>CreateCalculationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalcMenueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalcMenueForm.Designer.cs">
+      <DependentUpon>CalcMenueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLL\DataBase.cs" />
+    <Compile Include="DLL\MySqlContext.cs" />
+    <Compile Include="DLL\MySQLDatabase.cs" />
+    <Compile Include="BLL\Email.cs" />
+    <Compile Include="Helpers.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607281522562_SampleMigrations..cs" />
+    <Compile Include="Migrations\201607281522562_SampleMigrations..Designer.cs">
+      <DependentUpon>201607281522562_SampleMigrations..cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607281532406_SampleMigrations1.cs" />
+    <Compile Include="Migrations\201607281532406_SampleMigrations1.Designer.cs">
+      <DependentUpon>201607281532406_SampleMigrations1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607291500159_SampleMigrations2.cs" />
+    <Compile Include="Migrations\201607291500159_SampleMigrations2.Designer.cs">
+      <DependentUpon>201607291500159_SampleMigrations2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607291509539_SampleMigrations3.cs" />
+    <Compile Include="Migrations\201607291509539_SampleMigrations3.Designer.cs">
+      <DependentUpon>201607291509539_SampleMigrations3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607291516150_SampleMigrations4.cs" />
+    <Compile Include="Migrations\201607291516150_SampleMigrations4.Designer.cs">
+      <DependentUpon>201607291516150_SampleMigrations4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609161924335_SampleMigrations5.cs" />
+    <Compile Include="Migrations\201609161924335_SampleMigrations5.Designer.cs">
+      <DependentUpon>201609161924335_SampleMigrations5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612101320565_RepairKey.cs" />
+    <Compile Include="Migrations\201612101320565_RepairKey.Designer.cs">
+      <DependentUpon>201612101320565_RepairKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612101326323_RepairKey3.cs" />
+    <Compile Include="Migrations\201612101326323_RepairKey3.Designer.cs">
+      <DependentUpon>201612101326323_RepairKey3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BLL\TypeOfOwnership.cs" />
+    <Compile Include="TypeOfOwnershipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TypeOfOwnershipForm.Designer.cs">
+      <DependentUpon>TypeOfOwnershipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\Unit.cs" />
+    <Compile Include="UnitsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnitsForm.Designer.cs">
+      <DependentUpon>UnitsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValueCalculationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ValueCalculationForm.Designer.cs">
+      <DependentUpon>ValueCalculationForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddNewWorkerForm.resx">
+      <DependentUpon>AddNewWorkerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CounterpartyAddForm.resx">
+      <DependentUpon>CounterpartyAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CounterpartyForm.resx">
+      <DependentUpon>CounterpartyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CounterpartyTypeForm.resx">
+      <DependentUpon>CounterpartyTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateCalculationForm.resx">
+      <DependentUpon>CreateCalculationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalcMenueForm.resx">
+      <DependentUpon>CalcMenueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607281522562_SampleMigrations..resx">
+      <DependentUpon>201607281522562_SampleMigrations..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607281532406_SampleMigrations1.resx">
+      <DependentUpon>201607281532406_SampleMigrations1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607291500159_SampleMigrations2.resx">
+      <DependentUpon>201607291500159_SampleMigrations2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607291509539_SampleMigrations3.resx">
+      <DependentUpon>201607291509539_SampleMigrations3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607291516150_SampleMigrations4.resx">
+      <DependentUpon>201607291516150_SampleMigrations4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609161924335_SampleMigrations5.resx">
+      <DependentUpon>201609161924335_SampleMigrations5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612101320565_RepairKey.resx">
+      <DependentUpon>201612101320565_RepairKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612101326323_RepairKey3.resx">
+      <DependentUpon>201612101326323_RepairKey3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TypeOfOwnershipForm.resx">
+      <DependentUpon>TypeOfOwnershipForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnitsForm.resx">
+      <DependentUpon>UnitsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValueCalculationForm.resx">
+      <DependentUpon>ValueCalculationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\CounterpartyCompany.datasource" />
+    <None Include="Properties\DataSources\CounterpartyForm.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
